@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4A56AE71A833816005EFE61 /* Components.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E4A56AE61A833816005EFE61 /* Components.h */; };
-		E4A56AE91A833816005EFE61 /* Components.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A56AE81A833816005EFE61 /* Components.m */; };
 		E4A56AEF1A833816005EFE61 /* libComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A56AE31A833816005EFE61 /* libComponents.a */; };
+		E4A56B091A834C92005EFE61 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A56B011A834C92005EFE61 /* MMDrawerBarButtonItem.m */; };
+		E4A56B0A1A834C92005EFE61 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A56B041A834C92005EFE61 /* MMDrawerController.m */; };
+		E4A56B0B1A834C92005EFE61 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A56B061A834C92005EFE61 /* MMDrawerVisualState.m */; };
+		E4A56B0C1A834C92005EFE61 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A56B081A834C92005EFE61 /* UIViewController+MMDrawerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +31,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				E4A56AE71A833816005EFE61 /* Components.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,10 +38,17 @@
 
 /* Begin PBXFileReference section */
 		E4A56AE31A833816005EFE61 /* libComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComponents.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4A56AE61A833816005EFE61 /* Components.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Components.h; sourceTree = "<group>"; };
-		E4A56AE81A833816005EFE61 /* Components.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Components.m; sourceTree = "<group>"; };
 		E4A56AEE1A833816005EFE61 /* ComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A56AF41A833816005EFE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4A56B001A834C92005EFE61 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		E4A56B011A834C92005EFE61 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		E4A56B021A834C92005EFE61 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		E4A56B031A834C92005EFE61 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		E4A56B041A834C92005EFE61 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		E4A56B051A834C92005EFE61 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		E4A56B061A834C92005EFE61 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		E4A56B071A834C92005EFE61 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		E4A56B081A834C92005EFE61 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +91,7 @@
 		E4A56AE51A833816005EFE61 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E4A56AE61A833816005EFE61 /* Components.h */,
-				E4A56AE81A833816005EFE61 /* Components.m */,
+				E4A56AFE1A834C6B005EFE61 /* SideBar */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -103,6 +110,30 @@
 				E4A56AF41A833816005EFE61 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4A56AFE1A834C6B005EFE61 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				E4A56AFF1A834C92005EFE61 /* MMDrawerController */,
+			);
+			name = SideBar;
+			sourceTree = "<group>";
+		};
+		E4A56AFF1A834C92005EFE61 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				E4A56B001A834C92005EFE61 /* MMDrawerBarButtonItem.h */,
+				E4A56B011A834C92005EFE61 /* MMDrawerBarButtonItem.m */,
+				E4A56B021A834C92005EFE61 /* MMDrawerController+Subclass.h */,
+				E4A56B031A834C92005EFE61 /* MMDrawerController.h */,
+				E4A56B041A834C92005EFE61 /* MMDrawerController.m */,
+				E4A56B051A834C92005EFE61 /* MMDrawerVisualState.h */,
+				E4A56B061A834C92005EFE61 /* MMDrawerVisualState.m */,
+				E4A56B071A834C92005EFE61 /* UIViewController+MMDrawerController.h */,
+				E4A56B081A834C92005EFE61 /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawerController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4A56AE91A833816005EFE61 /* Components.m in Sources */,
+				E4A56B0B1A834C92005EFE61 /* MMDrawerVisualState.m in Sources */,
+				E4A56B0A1A834C92005EFE61 /* MMDrawerController.m in Sources */,
+				E4A56B0C1A834C92005EFE61 /* UIViewController+MMDrawerController.m in Sources */,
+				E4A56B091A834C92005EFE61 /* MMDrawerBarButtonItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +390,7 @@
 				E4A56AF91A833816005EFE61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4A56AFA1A833816005EFE61 /* Build configuration list for PBXNativeTarget "ComponentsTests" */ = {
 			isa = XCConfigurationList;
@@ -364,6 +399,7 @@
 				E4A56AFC1A833816005EFE61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
